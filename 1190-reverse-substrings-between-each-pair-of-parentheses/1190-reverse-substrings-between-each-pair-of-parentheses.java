@@ -13,13 +13,13 @@ class Solution {
                 st.push(i);
             }
         }
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
         for(char c : arr){
             if(c != '(' && c != ')'){
-                ans += c;
+                ans.append(c);
             }
         }
-        return ans;
+        return ans.toString();
     }void reverse(int i , int j , char [] arr){
         i++;
         j--;
