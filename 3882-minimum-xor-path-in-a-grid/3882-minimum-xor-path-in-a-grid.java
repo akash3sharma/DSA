@@ -21,13 +21,9 @@ class Solution {
             int [] comb = new int [1024];
             for(int k = 0 ; k < 1024 ; k++){
                 comb[k] = up[k] | down[k];
-            }
-
-            for(int xorvalue = 0 ; xorvalue < 1024 ; xorvalue++){
-                if(comb[xorvalue] == 1){
-                    int result = xorvalue ^ grid[i][j];
-                    dp[i][j][result] = 1;
-                }
+                if(comb[k] == 1)
+                {int temp = k ^ grid[i][j];
+                dp[i][j][temp] = 1;}
             }
         }
       } 
