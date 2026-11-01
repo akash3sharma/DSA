@@ -1,7 +1,7 @@
 class Solution {
     public int minMoves(int[] nums) {
 
-     int steps = 0;
+     int sum = 0;
 
      int min = nums[0];
 
@@ -9,19 +9,15 @@ class Solution {
 
         min = Math.min(i , min);
 
+        sum += i;
+
      }
 
-     for(int i : nums){
-        if(i != min){
-            steps += (i - min);
-        }
-     }
-
-     return steps;
+     return sum - min * nums.length;
      
-     
-
-     
-
+     // basically we need to reach every element at min so final array will have sum 
+     // min * n
+     // this sum can be acheived by sum - m
+     // min * n = sum - m
     }
 }
