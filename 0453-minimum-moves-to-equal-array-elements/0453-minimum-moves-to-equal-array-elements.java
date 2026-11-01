@@ -13,11 +13,7 @@ class Solution {
 
      }
 
-     return sum - min * nums.length;
-     
-     // basically we need to reach every element at min so final array will have sum 
-     // min * n
-     // this sum can be acheived by sum - m
-     // min * n = sum - m
+     return sum - (min * nums.length);
+    
     }
 }
