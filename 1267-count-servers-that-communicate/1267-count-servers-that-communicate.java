@@ -1,0 +1,36 @@
+class Solution {
+    public int countServers(int[][] grid) {
+
+       HashMap <Integer , Integer > row = new HashMap <>();
+
+       HashMap <Integer , Integer> col = new HashMap <>();
+
+       for(int i = 0 ; i < grid.length ; i++){
+
+        for(int j = 0 ; j < grid[0].length ; j++){
+
+            if(grid[i][j] == 1){
+                row.put(i , row.getOrDefault(i , 0) + 1);
+                col.put(j , col.getOrDefault(j , 0) + 1);
+            }
+
+          }
+
+       }
+
+       int ans = 0;
+
+       for(int i = 0 ; i < grid.length ; i++){
+
+        for(int j = 0 ; j < grid[0].length ; j++){
+
+            if(grid[i][j] == 1){
+                if(row.get(i) > 1 || col.get(j) > 1)ans++;
+            }
+
+          }
+
+       }
+       return ans;
+    }
+}
