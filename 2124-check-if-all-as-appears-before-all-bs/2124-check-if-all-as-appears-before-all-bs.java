@@ -8,6 +8,6 @@ class Solution {
             if(c == 'a' && i > a)a = i;
             if(c == 'b' && i < b)b = i;
         }
-        return a < b ? true : false;
+        return a < b ;
     }
 }
